@@ -1,7 +1,0 @@
-README.md
-setup.py
-objectKeyPointLabelStudio.egg-info/PKG-INFO
-objectKeyPointLabelStudio.egg-info/SOURCES.txt
-objectKeyPointLabelStudio.egg-info/dependency_links.txt
-objectKeyPointLabelStudio.egg-info/requires.txt
-objectKeyPointLabelStudio.egg-info/top_level.txt
