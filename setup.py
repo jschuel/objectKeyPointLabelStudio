@@ -1,0 +1,38 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='objectKeyPointLabelStudio',
+    version='1.0.0',
+    description='Interface to set up keypoint labeling with bounding boxes on LabelStudio',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/jschuel/objectKeyPointLabelStudio',
+    author='Jeff Schueler',
+    author_email='schuel93@gmail.com',
+    license='MIT',
+    packages=find_packages(),
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.9',
+    install_requires=[
+        "label-studio==1.12.1",
+        "label-studio-ml==1.0.9",
+        "notebook<6.5.0",
+        "numpy>=1.17.5",
+        "pandas>=1.0.0",
+        "matplotlib>=3.2.0",
+        "tqdm>=4.41.1",
+        "scikit-image>=0.18.0",
+        "scipy>=1.5.0",
+        "pillow>=7.0.0",
+        "pyyaml>=5.3",
+        "pyarrow>=1.0.0",
+        "cmasher",
+        "unzip",
+        "ultralytics",
+    ],
+    include_package_data=True,
+)
