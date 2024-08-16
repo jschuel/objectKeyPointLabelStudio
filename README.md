@@ -1,7 +1,7 @@
 # objectKeyPointLabelStudio
 objectKeyPointLabelStudio is a flexible, user-friendly interface for setting up ML-assisted labeling for custom object keypoint/pose detection projects in [LabelStudio](https://labelstud.io/). This package is designed to be used with [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics), and works out of the box with a pretrained yolov8-pose model. The package includes a pretrained YOLO model for object keypoint detection of simulated particle tracks in an optical time projection chamber. The general framework can be easily adapted to any custom project requiring the simultaneous detection of bounding boxes and keypoints. When everything is properly set up with a custom trained YOLO model, you'll be able to load an image in LabelStudio and it will automatically generate labels as shown in the image below. The objects enabled in your model and maximum number of keypoints per object is configurable in a `.yaml` file. Instructions are below:
 
-[!image](images/5.png)
+![image](images/5.png)
 
 ## Getting started
 1. Clone the repository
