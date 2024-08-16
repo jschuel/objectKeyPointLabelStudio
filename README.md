@@ -15,7 +15,7 @@ This will install all necessary dependencies, including LabelStudio and Ultralyt
 
 ## Package contents
 
-The directory tree of tihs package is shown below.
+The directory tree of this package is shown below.
 
 ```bash
 objectKeyPointLabelStudio/
@@ -120,3 +120,25 @@ The script will prompt you to enter the name for the project instance you would 
    WARNING: This is a development server. Do not use it in a production deployment.
 [2024-08-16 01:26:01,134] [INFO] [werkzeug::_log::225]  * Running on http://XXX.XXX.XXX.XXX:9090/ (Press CTRL+C to quit)
 ```
+
+5. Open up LabelStudio, sign in and create a new project. Name it whatever you want, and then click on the Data Import tab
+6. One way to load images into LabelStudio is to drag and drop a folder of images. Sample images are already included in `objectKeyPointLabelStudio/objectKeyPointLabelStudio/test_images_for_labelStudio/`. You can find that folder in a file browser GUI and click and drag it into the middle of the project popup window as shown in the image below
+
+![fig2](images/2.png)
+
+7. Navigate to the Labeling Setup tab. There will be a list of templates that you can browse. Our template is a custom template, so click Code, delete the XML code currently shown, and then copy the contents of `output.xml` made in step 3 into this code block. Assuming the contents of `output.xml` were read correctly, the interfact will look like the image below
+
+![fig3](images/3.png)
+
+Click the blue Save button and you will have created your project!
+
+8. Now click Settings, and then on the left panel, click Model, and finally click the button in the middle of the page that says "Connect Model". A popup window will open. Fill it with the contents shown below
+
+![fig4](images/4.png)
+
+Click Validate and Save
+
+9. Open up an image and it should automatically label the track with a bounding box and keypoints. If it does so, congratulations, you're all set up!
+
+## Creating your own project
+This package assumes you already have a pretrained YOLOv8 model and would like to use this to streamline the labeling process. Assuming you do, set up the `Object` classes in `master_configuration.yaml`, set `ML_path` to point to your pre-trained weights file, and set `maxNumKeyPoints` to be whatever is relevant for your project.
