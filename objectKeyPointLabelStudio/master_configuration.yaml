@@ -3,8 +3,8 @@ yoloConf: #This is our master yolo configuration that drives the rest of the pac
 
 labelStudioConf: #Configuration for Label Studio
   ML_path: '../../pretrained/test.pt' #Set the path (relative to LabelStudio/KeyPointExample/) you want for YOLO models weights for Label Studio preannotations.
-  URL: 'http://192.168.1.162:8080' #Find your local IP address using ifconfig -a in the terminal. Your URL should then be 'http://<your_IP_address>:8080
-  TOKEN: 'f0f1692429d29c1e8ede5bb137f646737fff7fbe' #This is a security token to communicate with Label Studio. You can find this by typing label-studio user --username <email address you use to sign into Label Studio> in your terminal
+  URL: '' #Find your local IP address using ifconfig -a in the terminal. Your URL should then be 'http://<your_IP_address>:8080
+  TOKEN: '' #This is a security token to communicate with Label Studio. You can find this by typing label-studio user --username <email address you use to sign into Label Studio> in your terminal
   
 
 Objects: #These are the object classes you want to train YOLO on. You can adjust this, and add or remove entries as needed for your task. These are read into generate_xml.py for LabelStudio and preannotate.py for the LabelStudio ML backend
